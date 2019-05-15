@@ -7,9 +7,9 @@ module.exports = (option, app) => {
       await next(option)
       return
     }
-    
-    if (ctx.cookies.get('token')) {
-      let token = ctx.cookies.get('token')
+    ctx.logger.info(ctx.cookies.get('token',{signed: false})) 
+    if (ctx.cookies.get('token',{signed: false})) {
+      let token = ctx.cookies.get('token',{signed: false})
       //解码token
       try {
         ctx.jwt.verify(token, app.config.jwtSecret);

@@ -27,7 +27,7 @@ class FriendController extends Controller {
         const {ctx} = this
 
         let userId = ctx.user.userId
-
+        console.log(userId);
         let friendList = await ctx.service.user.getUserList(userId)
         
         ctx.returnBody(200, "获取成功", friendList)

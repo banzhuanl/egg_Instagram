@@ -5,7 +5,7 @@ class UserController extends Controller {
     // 获取用户信息
     public async userInfo() {
         const {ctx} = this
-
+        ctx.logger.info('userInfo')
         let userId = ctx.query.userId || ctx.user.userId
 
         // 获取并填充数据

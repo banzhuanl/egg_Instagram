@@ -46,12 +46,12 @@ Avatar.defaultProps = {
         abstract: false
     },
     avatarStyle: {
-        'width': '32px',
-        'height': '32px'
+        'width': '40px',
+        'height': '40px'
     },
     usernameStyle: {
         fontWeight: 600,
-        fontSize: '14px',
+        fontSize: '16px',
         width: '140px'
     },
     abstractStyle: {

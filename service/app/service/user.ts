@@ -42,8 +42,10 @@ export default class UserService extends Service {
             })
             return
         }
+        console.log(user);
         
         const userInfo = await this.ctx.model.User.create(user);
+        console.log(userInfo);
 
         // 注册成功，返回userid给前端
         ctx.status = 200;

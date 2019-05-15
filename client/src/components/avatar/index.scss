@@ -21,10 +21,10 @@
         .username {
           min-height: 14px;
           background: #efefef;
-          line-height: 14px;
           color: #262626;
           font-weight: 600;
           font-size: 14px;
+          line-height: normal;
           overflow-x: hidden;
           text-overflow:ellipsis;
           white-space: nowrap;
@@ -34,8 +34,8 @@
           margin-top: 5px;
           background: #efefef;
           font-size: 12px;
-          line-height: 14px;
           white-space: nowrap;
+          line-height: normal;
           color: #999;
           overflow-x: hidden;
           text-overflow:ellipsis;

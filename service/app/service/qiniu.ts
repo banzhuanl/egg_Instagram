@@ -10,12 +10,12 @@ interface qiniuOptioin {
 }
 
 export default class qiniuService extends Service {
-    private accessKey: string = '';
-    private secretKey: string = '';
-    private publicBucketDomain = 'http://piyhxgz90.bkt.clouddn.com';
+    private accessKey: string = '-wRkHk-6hVA33bALaCftDjcK2d3QU99jKP3t2pdF';
+    private secretKey: string = 'TqzkaiDdc3Q7fFtR-Z5KW_tLb_p6eVMk5y_uvgz3';
+    private publicBucketDomain = 'http://prhh9r561.bkt.clouddn.com';
 
     private options: qiniuOptioin = {
-        scope: 'instagram',
+        scope: 'fjj_qin',
         expires: 7200
     }
 

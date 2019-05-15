@@ -14,21 +14,21 @@ export default (appInfo: EggAppInfo) => {
   config.basePath = '/api/v2'
 
   // 关闭安全威胁csrf的防范
-  config.security = {
-    csrf: {
-      ignore: ctx => {
-        let ipReg = /^(172\.17|127\.0)/;
-        return ipReg.test(ctx.ip)
-      }
-    }
-  }
+  //config.security = {
+  //  csrf: {
+  //    ignore: ctx => {
+  //      let ipReg = /^(172\.17|127\.0)/;
+  //      return ipReg.test(ctx.ip)
+  //    }
+  //  }
+  //}
 
   config.security= {
     csrf: {
       enable: false,
       ignoreJSON: true
     },
-      domainWhiteList: ['http://localhost:7000','http://127.0.0.1:7000']
+    domainWhiteList: ['http://localhost:7000','http://127.0.0.1:7000', 'http://47.103.192.182:7000']
   }
 
   config.cors = {

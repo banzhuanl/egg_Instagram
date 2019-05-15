@@ -5,7 +5,7 @@ module.exports = {
     return jwt
   },
   get user() {
-    let token = this.cookies.get('token')
+    let token = this.cookies.get('token',{signed: false})
     let user = jwt.verify(token, this.app.config.jwtSecret);
     return user
   },

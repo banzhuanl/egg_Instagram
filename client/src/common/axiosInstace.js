@@ -7,7 +7,8 @@ import { notification } from 'antd';
 const instance = axios.create({
     //当创建实例的时候配置默认配置
     xsrfCookieName: 'xsrf-token',
-    baseURL: baseDomain
+    baseURL: baseDomain,
+    withCredentials: true,
 });
 
 // 添加请求拦截器
@@ -69,7 +70,7 @@ instance.interceptors.response.use(function (response) {
         // 登录授权
         if (error.response.status === 401) {
             setTimeout(() => {
-                window.location.href = '/login'
+                //window.location.href = '/login'
             }, 2000)
         }
     } catch (err) {
