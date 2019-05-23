@@ -8,7 +8,7 @@ module.exports = {
     login: path.resolve(clientPath, "src/pages/login/index.js")
   }, 
   output: {
-      publicPath: '/',
+      publicPath: '/public/',
       path: path.resolve(process.cwd(), "dist"),
       filename: 'src/[name].js'
   },

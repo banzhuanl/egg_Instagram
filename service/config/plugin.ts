@@ -29,6 +29,10 @@ const plugin: EggPlugin = {
   cors: {
     enable: true,
     package: "egg-cors"
+  },
+  ejs: {
+    enable: true,
+    package: 'egg-view-ejs'
   }
 };
 

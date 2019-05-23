@@ -1,12 +1,13 @@
 import { Application, Router } from 'egg';
 
 export default (app: Application) => {
-  const { controller } = app;
+  const { controller, router } = app;
   const { user, topic, handle, friend, login } = controller
   
-  const apiV2Router: Router = app.router.namespace('/api/v2');
+  // index
+  router.namespace('/').get('/', login.index); // index
 
-
+  const apiV2Router: Router = router.namespace('/api/v2');
 
     // login 
     apiV2Router.post('/login/register', login.register); // 注册

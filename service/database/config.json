@@ -7,16 +7,16 @@
     "dialect": "mysql"
   },
   "test": {
-    "username": "root",
-    "password": null,
-    "database": "database_test",
+    "username": "admin",
+    "password": 'w-657356',
+    "database": "127.0.0.1",
     "host": "127.0.0.1",
     "dialect": "mysql"
   },
   "production": {
-    "username": "root",
-    "password": null,
-    "database": "database_production",
+    "username": "admin",
+    "password": 'w-657356',
+    "database": "127.0.0.1",
     "host": "127.0.0.1",
     "dialect": "mysql"
   }

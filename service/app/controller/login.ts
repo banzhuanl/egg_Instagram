@@ -7,6 +7,13 @@ class UserController extends Controller {
      */
 
     // 注册
+    public async index () {
+        const {ctx} = this;
+        // 首页
+        await ctx.render('index.html');
+    }
+
+    // 注册
     public async register () {
         const {ctx} = this;
         const {password, username, email} = ctx.request.body

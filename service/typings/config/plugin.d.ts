@@ -9,3 +9,4 @@ import 'egg-router-plus';
 import 'egg-passport';
 import 'egg-passport-local';
 import 'egg-cors';
+import 'egg-view-ejs';

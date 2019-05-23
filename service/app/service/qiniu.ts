@@ -12,7 +12,7 @@ interface qiniuOptioin {
 export default class qiniuService extends Service {
     private accessKey: string = '-wRkHk-6hVA33bALaCftDjcK2d3QU99jKP3t2pdF';
     private secretKey: string = 'TqzkaiDdc3Q7fFtR-Z5KW_tLb_p6eVMk5y_uvgz3';
-    private publicBucketDomain = 'http://prhh9r561.bkt.clouddn.com';
+    private publicBucketDomain = 'http://qiniu.tinke.top';
 
     private options: qiniuOptioin = {
         scope: 'fjj_qin',

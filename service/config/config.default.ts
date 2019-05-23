@@ -28,7 +28,7 @@ export default (appInfo: EggAppInfo) => {
       enable: false,
       ignoreJSON: true
     },
-    domainWhiteList: ['http://localhost:7000','http://127.0.0.1:7000', 'http://47.103.192.182:7000']
+    domainWhiteList: ['http://localhost:7000','http://127.0.0.1:7000', 'http://47.103.192.182:7000', 'www.tinke.top']
   }
 
   config.cors = {
@@ -57,7 +57,22 @@ export default (appInfo: EggAppInfo) => {
   };
 
   // 使用koa的中间件
-  config.middleware = ['errorHandler', 'authorization']
+  config.middleware = ['errorHandler', 'authorization', 'notfoundHandler']
+
+  //异常重定向页面
+  //config.notfound = {
+  //  pageUrl: '/'
+  //}
+
+  config.sequelize = {
+    dialect: 'mysql',
+    host: '127.0.0.1',
+    port: 3306,
+    database: 'learn',
+    username: 'admin',
+    password: 'w-657356',
+    operatorsAliases: false
+  };
 
   // add your special config in here
   const bizConfig = {
@@ -66,9 +81,10 @@ export default (appInfo: EggAppInfo) => {
 
   // 添加 view 配置
   const view = {
-    defaultViewEngine: 'nunjucks',
+    //defaultViewEngine: 'nunjucks',
     mapping: {
       '.tpl': 'nunjucks',
+      '.html': 'ejs'
     },
   };
 
